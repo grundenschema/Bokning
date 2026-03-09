@@ -58,7 +58,6 @@ const AREAS = {
   ocean: { title: "Oceanen / Filmrum", studios: ["Oceanen", "Filmrum"] }
 };
 const monthNames = ["januari","februari","mars","april","maj","juni","juli","augusti","september","oktober","november","december"];
-const dayNames = ["Söndag","Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag"];
 
 let currentArea = "pod";
 let currentDate = new Date();
@@ -92,8 +91,7 @@ function dateToISO(date) {
 }
 
 function formatDateLabel(date) {
-  return `${dayNames[date.getDay()]} ${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}`;
-} ${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+  return `${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}`;
 }
 
 function addDays(date, days) {
@@ -593,4 +591,3 @@ setupSelects();
 
 </body>
 </html>
-
